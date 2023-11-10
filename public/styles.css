@@ -39,31 +39,39 @@ footer p {
 .note-creator {
   background: #fff;
   border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  width: 240px;
+  box-shadow: 0 2px 5px rgb(150, 150, 150);
+  padding: 20px;
+  width: 480px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   float: center;
 }
 
-.note-creator input {
-  font-size: 1.1em;
-  border: 0px solid rgba(252, 252, 252, 0);
-  border-radius: 0px;
-  font-weight: 300;
-}
-
-.note-creator input:focus {
-  outline: 0;
+.note-creator input,
+.note-creator textarea {
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  width: 100%;
 }
 
 .note-creator button {
-  font-size: 1.1em;
+  font-size: 0.9em;
   float: right;
-  color: #f5ba13;
+  color: #fff;
+  background: #f5ba13;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .note {
@@ -87,7 +95,14 @@ footer p {
 }
 
 .note button {
-  font-size: 1.1em;
+  height: 40px;
+  width: 40px;
+  font-size: 1em;
   float: right;
   color: #f5ba13;
+  background: #aeaeae30;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 25px;
 }

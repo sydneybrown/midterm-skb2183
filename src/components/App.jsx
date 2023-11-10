@@ -77,12 +77,13 @@ function App() {
           placeholder="Title"
           value={inputText.title}
         />
-        <input
+        <textarea
           name="content"
           onChange={handleChange}
-          type="text"
+          type="paragraph_text"
           placeholder="Take a note..."
           value={inputText.content}
+          rows="3"
         />
         <button onClick={addNote}>
           <span>Add</span>
