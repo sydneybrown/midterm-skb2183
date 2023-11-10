@@ -7,7 +7,6 @@ import notes from "../notes.js";
 var nextKey = getMaxKey(notes) + 1;
 
 function App() {
-  console.log(nextKey);
   const [inputText, setInput] = useState({
     key: nextKey,
     title: "",
@@ -45,6 +44,28 @@ function App() {
     });
   }
 
+  function deleteNote(id) {
+    setNotes((prevNotes) => {
+      const ind = prevNotes.findIndex((note) => {
+        return note.key === id;
+      });
+      if (ind > -1) prevNotes.splice(ind, 1);
+      return [...prevNotes];
+    });
+  }
+
+  function createNote(note) {
+    return (
+      <Note
+        key={note.key}
+        id={note.key}
+        title={note.title}
+        content={note.content}
+        deleteNote={deleteNote}
+      />
+    );
+  }
+
   return (
     <div>
       <Header />
@@ -79,9 +100,6 @@ function getMaxKey(notes) {
     if (n.key > max) max = n.key;
   }
   return max;
-}
-function createNote(note) {
-  return <Note key={note.id} title={note.title} content={note.content} />;
 }
 
 export default App;

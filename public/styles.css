@@ -51,6 +51,13 @@ footer p {
 
 .note-creator input {
   font-size: 1.1em;
+  border: 0px solid rgba(252, 252, 252, 0);
+  border-radius: 0px;
+  font-weight: 300;
+}
+
+.note-creator input:focus {
+  outline: 0;
 }
 
 .note-creator button {
